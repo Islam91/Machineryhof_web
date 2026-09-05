@@ -1,3 +1,6 @@
 local_only/
 .claude/
 .DS_Store
+.specify/
+specs/
+CLAUDE.md

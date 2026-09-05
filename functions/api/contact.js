@@ -1,0 +1,119 @@
+const REQUIRED_FIELDS = ["firstName", "lastName", "email", "company", "inquiryType", "message"];
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const SALES_EMAIL = "sales@machineryhof.com";
+const FROM_EMAIL = "no-reply@machineryhofgmbh.com";
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function validate(payload) {
+  for (const field of REQUIRED_FIELDS) {
+    if (!payload[field] || String(payload[field]).trim().length === 0) {
+      return `Missing required field: ${field}`;
+    }
+  }
+  if (!EMAIL_PATTERN.test(payload.email)) {
+    return "Invalid email address";
+  }
+  return null;
+}
+
+function buildEmailBody(payload) {
+  const rows = [
+    ["Name", `${payload.firstName} ${payload.lastName}`],
+    ["Email", payload.email],
+    ["Phone", payload.phone || "N/A"],
+    ["Company", payload.company],
+    ["Inquiry Type", payload.inquiryType],
+    ["Product Interest", payload.productInterest || "N/A"]
+  ];
+
+  const textLines = rows.map(([label, value]) => `${label}: ${value}`);
+  textLines.push("", "Message:", payload.message);
+
+  const htmlRows = rows
+    .map(([label, value]) => `<tr><td><strong>${escapeHtml(label)}</strong></td><td>${escapeHtml(value)}</td></tr>`)
+    .join("");
+
+  return {
+    text: textLines.join("\n"),
+    html: `<table>${htmlRows}</table><p><strong>Message:</strong></p><p>${escapeHtml(payload.message).replace(/\n/g, "<br>")}</p>`
+  };
+}
+
+async function rateLimit(context) {
+  const ip = context.request.headers.get("cf-connecting-ip") || "unknown";
+  const cache = caches.default;
+  const key = new Request(`https://rate-limit.internal/contact/${ip}`);
+  const cached = await cache.match(key);
+
+  if (cached) {
+    return false;
+  }
+
+  const response = new Response("1", { headers: { "Cache-Control": "max-age=60" } });
+  await cache.put(key, response.clone());
+  return true;
+}
+
+export async function onRequestPost(context) {
+  let payload;
+
+  try {
+    payload = await context.request.json();
+  } catch (error) {
+    return new Response(JSON.stringify({ error: "Invalid JSON body" }), {
+      status: 400,
+      headers: { "Content-Type": "application/json" }
+    });
+  }
+
+  const validationError = validate(payload);
+  if (validationError) {
+    return new Response(JSON.stringify({ error: validationError }), {
+      status: 400,
+      headers: { "Content-Type": "application/json" }
+    });
+  }
+
+  const allowed = await rateLimit(context);
+  if (!allowed) {
+    return new Response(JSON.stringify({ error: "Too many requests, please try again shortly." }), {
+      status: 429,
+      headers: { "Content-Type": "application/json" }
+    });
+  }
+
+  const { text, html } = buildEmailBody(payload);
+
+  const mailResponse = await fetch("https://api.mailchannels.net/tx/v1/send", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      personalizations: [{ to: [{ email: SALES_EMAIL, name: "Machinery Hof Sales" }] }],
+      from: { email: FROM_EMAIL, name: "machineryhofgmbh.com Contact Form" },
+      reply_to: { email: payload.email, name: `${payload.firstName} ${payload.lastName}` },
+      subject: `New ${payload.inquiryType} inquiry from ${payload.firstName} ${payload.lastName}`,
+      content: [
+        { type: "text/plain", value: text },
+        { type: "text/html", value: html }
+      ]
+    })
+  });
+
+  if (!mailResponse.ok) {
+    return new Response(JSON.stringify({ error: "Email delivery failed" }), {
+      status: 502,
+      headers: { "Content-Type": "application/json" }
+    });
+  }
+
+  return new Response(JSON.stringify({ ok: true }), {
+    status: 200,
+    headers: { "Content-Type": "application/json" }
+  });
+}

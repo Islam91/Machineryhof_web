@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Machinery Hof GmbH</title>
+<meta name="description" content="Get in touch with our 24/7 support team at machineryhofgmbh.com for quotes and technical assistance.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">MH</span>
+      <span class="brand-text">
+        <span class="brand-name">MACHINERY HOF</span>
+        <span class="brand-sub">Spare Parts &amp; Engineering</span>
+      </span>
+    </a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">
+      <span class="sr-only">Menu</span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="site-nav" id="siteNav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="equipment.html">Equipment</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a class="nav-cta" href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Our team is available round the clock to provide quotes and technical advice.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="contact-form-heading">
+    <div class="container two-col">
+      <div>
+        <h2 id="contact-form-heading">Send an Inquiry</h2>
+        <form id="contactForm" method="post" action="/api/contact" novalidate>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="firstName">First Name <span class="required-mark">*</span></label>
+              <input type="text" id="firstName" name="firstName" required aria-describedby="firstName-error">
+              <span class="field-error" id="firstName-error">First name is required.</span>
+            </div>
+
+            <div class="field">
+              <label for="lastName">Last Name <span class="required-mark">*</span></label>
+              <input type="text" id="lastName" name="lastName" required aria-describedby="lastName-error">
+              <span class="field-error" id="lastName-error">Last name is required.</span>
+            </div>
+
+            <div class="field">
+              <label for="email">Email Address <span class="required-mark">*</span></label>
+              <input type="email" id="email" name="email" required aria-describedby="email-error">
+              <span class="field-error" id="email-error">Enter a valid email address.</span>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="field field-full">
+              <label for="company">Company Name <span class="required-mark">*</span></label>
+              <input type="text" id="company" name="company" required aria-describedby="company-error">
+              <span class="field-error" id="company-error">Company name is required.</span>
+            </div>
+
+            <div class="field">
+              <label for="inquiryType">Inquiry Type <span class="required-mark">*</span></label>
+              <select id="inquiryType" name="inquiryType" required aria-describedby="inquiryType-error">
+                <option value="">Select an option</option>
+                <option value="Product Information">Product Information</option>
+                <option value="Quote Request">Quote Request</option>
+                <option value="Technical Support">Technical Support</option>
+                <option value="General Inquiry">General Inquiry</option>
+              </select>
+              <span class="field-error" id="inquiryType-error">Please select an inquiry type.</span>
+            </div>
+
+            <div class="field">
+              <label for="productInterest">Product Category Interest</label>
+              <select id="productInterest" name="productInterest">
+                <option value="">Select an option</option>
+                <option value="Cold Milling Parts">Cold Milling Parts</option>
+                <option value="Pavement Paver Parts">Pavement Paver Parts</option>
+                <option value="Filtration">Filtration</option>
+                <option value="Lubrication">Lubrication</option>
+                <option value="Tracks & Rollers">Tracks &amp; Rollers</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="field field-full">
+              <label for="message">Message <span class="required-mark">*</span></label>
+              <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+              <span class="field-error" id="message-error">Please enter a message.</span>
+            </div>
+          </div>
+
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+
+          <p style="margin-top: var(--space-4)">
+            <button type="submit" class="btn btn-primary">Send Inquiry</button>
+          </p>
+        </form>
+      </div>
+
+      <div>
+        <h2>Contact Information</h2>
+        <ul class="contact-info-list">
+          <li>General: <a href="mailto:baher@machineryhof.com">baher@machineryhof.com</a></li>
+          <li>Sales: <a href="mailto:sales@machineryhof.com">sales@machineryhof.com</a></li>
+          <li>Technical Support: <a href="mailto:islam@machinery-hof.com">islam@machinery-hof.com</a></li>
+          <li>Phone: <a href="tel:+4915202409390">+49 (0)152 0240 9390</a></li>
+          <li><a href="https://wa.me/491520240939" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+          <li>Availability: 24/7</li>
+        </ul>
+
+        <h3 style="margin-top: var(--space-5)">Office</h3>
+        <p>
+          Oslebshauser Heerstraße 86<br>
+          28239 Bremen, Germany
+        </p>
+        <p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Oslebshauser+Heerstra%C3%9Fe+86%2C+28239+Bremen%2C+Germany" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+        </p>
+        <div id="map-embed"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h3>Machinery Hof</h3>
+      <p>Reliable spare parts, engineering solutions and raw materials for construction machinery.</p>
+      <p>Oslebshauser Heerstraße 86<br>28239 Bremen, Germany</p>
+    </div>
+    <div class="footer-col">
+      <h3>Products</h3>
+      <ul>
+        <li><a href="products.html#cold-milling">Cold Milling</a></li>
+        <li><a href="products.html#pavement-paver">Pavement Paver</a></li>
+        <li><a href="products.html#filtration">Filtration</a></li>
+        <li><a href="products.html#lubrication">Lubrication Systems</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="resources.html#catalog">Product Catalog</a></li>
+        <li><a href="resources.html#faq">FAQ</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="mailto:sales@machineryhof.com">sales@machineryhof.com</a></li>
+        <li><a href="tel:+4915202409390">+49 (0)152 0240 9390</a></li>
+        <li><a href="https://wa.me/491520240939" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 Machinery Hof GmbH. All rights reserved.</p>
+    <ul class="footer-legal">
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms &amp; Conditions</a></li>
+      <li><a href="sitemap.html">Sitemap</a></li>
+    </ul>
+  </div>
+  <div id="analytics-mount"></div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/contact-form.js"></script>
+</body>
+</html>

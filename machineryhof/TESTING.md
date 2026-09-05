@@ -1,81 +1,38 @@
-# Testing Report — Machinery Hof Website
+# Machinery Hof Website Testing
 
-Environment note: this build/test session ran in a sandboxed environment without a controllable browser (no screenshot-capable browser tool, headless display). Every test below that could be verified programmatically was actually run against the real files (not eyeballed) — results are pasted from real command output, not assumed. A short manual checklist is included at the end for a final human pass in an actual browser.
+Per the project constitution's Testing Standards, this is a manual checklist (no automated test framework). This file records what has actually been verified and how, and honestly what still needs a human with a real browser, since browser automation was unavailable in the environment this was built in.
 
-## 1. HTML structural integrity
+## What was verified (automated/static checks, run 2026-09-05)
 
-| Check | Method | Result |
-|---|---|---|
-| Tag balance / nesting | Python `html.parser`, full document walk | **PASS** — 0 unclosed tags, 0 mismatches |
-| Duplicate IDs | Same parser, id collision check | **PASS** — 27 unique ids, 0 duplicates |
-| Internal anchor targets (`#about`, `#products`, etc.) | Cross-referenced every `href="#..."` against existing ids | **PASS** — all 6 anchor targets resolve |
-| `for=` / `aria-labelledby` / `aria-describedby` targets | Cross-referenced against ids | **PASS** — 0 missing references |
-| Inline SVG well-formedness | Parsed all 13 inline `<svg>` blocks as XML | **PASS** (see note below) |
-| Favicon data-URI | Decoded and parsed as SVG | **PASS** — valid |
+- **HTML well-formedness**: every page (`index.html`, `about.html`, `products.html`, `equipment.html`, `solutions.html`, `resources.html`, `contact.html`, `privacy.html`, `terms.html`, `sitemap.html`) parsed with no unclosed/mismatched tags. ✅
+- **Heading hierarchy** (FR-014): checked programmatically for skipped levels across all 10 pages. Found and fixed 4 real bugs: `equipment.html` and 3 placeholder pages jumped straight from `<h1>` to `<h3>` with no `<h2>`. Re-checked clean after the fix. ✅
+- **Internal link integrity** (SC-005): every `href="*.html"` across all pages resolves to a file that exists. ✅ Same-page `href="#id"` anchors all resolve to a real `id` on that page. ✅ Cross-page anchors (e.g. `equipment.html` and the footer linking into `products.html#cold-milling` etc.) were checked programmatically too; every cross-page anchor resolves to a real `id` on its target page. ✅
+- **JS syntax**: `js/nav.js`, `js/contact-form.js`, and `functions/api/contact.js` all parse with no syntax errors (`node --check`). ✅
+- **CSS syntax**: brace-balanced, no obvious structural errors. ✅
+- **HTTP smoke test**: served the site with `python3 -m http.server` and confirmed `index.html` returns `200 OK`. ✅
 
-Note: one SVG (`.blueprint` hero diagram) uses `&nbsp;`, which is a valid HTML5 named character reference but not valid in strict XML without a DTD — a strict-XML parser flags it, a browser's HTML parser does not. This is expected, not a bug.
+## Not yet verified: needs a human with a browser
 
-## 2. JavaScript
+Browser automation was disabled in the environment this was built in, so none of the following were actually exercised, only reasoned about from the code:
 
-| Check | Method | Result |
-|---|---|---|
-| Syntax validity | `node --check js/script.js` | **PASS** |
-| DOM selectors resolve | Cross-referenced every `getElementById`/`querySelector` target against actual markup | **PASS** — all resolve (`has-error` is intentionally a runtime-only class) |
-| Email regex correctness | 7 unit cases run directly in Node (empty, malformed, no-TLD, spaces, valid) | **PASS** — 7/7 |
-| No debug leftovers | Grepped for `console.*` / `debugger` | **PASS** — none found |
+- **Responsive breakpoints** (375px / 768px / 1200px+): CSS includes breakpoints at 600px/768px/900px targeting this, but no visual check was done at any width.
+- **Contact form, full path**: client-side validation logic was written and syntax-checked, but never actually submitted in a browser. In particular: does the empty/invalid-field error state actually show/hide correctly, does a valid submission actually reach `/api/contact`, and does MailChannels actually deliver an email; the last one *cannot* be tested without deploying to Cloudflare Pages (MailChannels needs the DNS TXT record on `machineryhofgmbh.com` first) or running `wrangler pages dev` locally, neither of which was done here.
+- **Keyboard navigation**: skip link, nav toggle, form fields, and FAQ `<details>` elements were all built to be keyboard-operable (native semantics, visible `:focus-visible` outlines), but tab order was never walked through by hand.
+- **Console errors**: no browser was opened, so no DevTools console was ever actually checked.
+- **Cross-browser** (Chrome/Firefox/Safari): not checked in any browser at all.
+- **WCAG AA contrast**: colors were chosen to look high-contrast (navy/white, dark gray text on white/light gray) but no contrast-ratio tool was run against the actual rendered page.
+- **Lighthouse Performance/SEO ≥ 90** (SC-002/SC-003): not run: needs a real Lighthouse pass against a deployed or locally-served instance.
 
-## 3. Form validation (logic-level, see manual checklist for interactive pass)
+## How to actually run these before launch
 
-- Empty **name** / **email** / **message** → each shows an inline error and blocks submit (verified in code path: `validateField` runs for all three required fields before allowing success state).
-- Invalid email format (`missing@domain`, `a@b`, `with space@x.com`) → rejected by regex, confirmed via unit tests above.
-- Valid input on all required fields → `form.reset()` runs, success banner (`#formSuccess`) is un-hidden and focused, error state cleared.
-- Nothing is submitted anywhere — `event.preventDefault()` is unconditional; there is no `fetch`/`XMLHttpRequest`/`action` in the codebase (confirmed via grep).
+1. `cd machineryhof && python3 -m http.server 8000`, open `http://localhost:8000` in Chrome/Firefox/Safari and walk every page, every link, and the Contact form by hand.
+2. Resize the browser (or use DevTools device toolbar) to 375px, 768px, and 1200px+ and confirm layout holds.
+3. Tab through each page with the mouse untouched; confirm focus order and visibility.
+4. Open DevTools console on every page; confirm zero errors/warnings.
+5. Run Lighthouse (Chrome DevTools → Lighthouse tab) against the Home page.
+6. For the Contact form's real email delivery: either `wrangler pages dev machineryhof` locally, or deploy to a Cloudflare Pages preview and submit a real test inquiry, and confirm it arrives at `sales@machineryhof.com`.
 
-## 4. Link integrity
+## Known content gaps (not testing issues, but will affect what you see)
 
-- All internal links (`#top`, `#about`, `#products`, `#benefits`, `#contact`) resolve to real ids — confirmed above.
-- `tel:` and `mailto:` links use the real numbers/addresses from the source documents.
-- The one external link (Google Maps) carries `target="_blank" rel="noopener noreferrer"` — confirmed via grep, this is the only external `href` in the document.
-- No broken/placeholder (`href="#"` or `javascript:void`) links exist anywhere.
-
-## 5. Accessibility
-
-| Check | Method | Result |
-|---|---|---|
-| Heading hierarchy | Extracted every `h1`–`h3` in document order | **PASS** — single `h1`, logical `h2`→`h3` nesting, no skipped levels |
-| Keyboard traps / tabindex hacks | Grepped for non-`"0"` tabindex | **PASS** — none |
-| Form field name collisions | Checked all `name=` attributes | **PASS** — all unique |
-| Skip-to-content link | Present, becomes visible on focus | **PASS** |
-| Focus-visible styling | `:focus-visible` outline defined globally | **PASS** |
-| `prefers-reduced-motion` respected | Media query disables animation/transition durations | **PASS** |
-| Decorative SVGs hidden from AT | All icon SVGs carry `aria-hidden="true"`; the one meaningful SVG (hero diagram) has `role="img"` + `<title>`/`<desc>` | **PASS** |
-| Color contrast (WCAG AA) | Computed relative-luminance contrast ratios for every foreground/background text pairing in the stylesheet (22 pairs) | **PASS after 1 fix** — see below |
-
-**Contrast fix applied during testing:** the `.eyebrow` label color and the contact-info label color (`--gold-600`, `#D68C12`) measured **2.53:1** on the page background — below the 4.5:1 AA minimum for small text. Introduced a dedicated text-safe token `--gold-700: #8A5809` (**5.54:1** on `--paper`) and switched both usages to it. `--gold-600` remains in use only as a button *background* (with dark navy text on top, 6.22:1 — unaffected). All 22 checked text/background pairs now pass AA-normal (≥4.5:1); several exceed AAA.
-
-## 6. Performance / hygiene
-
-| Check | Result |
-|---|---|
-| External CDN scripts/styles/fonts | **0** — grepped `@import`, `url()`, and all `src`/`href` values; only local files, anchors, `mailto:`, `tel:`, and one Maps link exist |
-| `console.log`/`debugger` leftovers | **0** |
-| Total payload (HTML+CSS+JS) | **48 KB** uncompressed, well under any reasonable budget |
-| CSS brace balance | 149 open / 149 close — **balanced** |
-
-## 7. Responsive design (reviewed at code level for 375px / 768px / 1200px)
-
-- **375px (mobile-first base):** single-column stacked sections, hamburger nav (`.nav-toggle` visible, `.main-nav` collapses to a slide-down panel), full-width buttons in the contact form, 1-column feature list/product grid/benefits grid.
-- **768px (`min-width: 768px`):** hamburger hidden, horizontal nav restored; hero becomes 2-column (copy + diagram side by side); about section becomes 2-column (narrative + spec table); product grid becomes 2 columns; benefits grid becomes 2 columns; contact section becomes 2 columns; footer becomes 4 columns.
-- **1200px (`min-width: 1200px`):** feature strip and benefits grid expand to their full multi-column layout (5 across), product grid becomes 3 columns, headline scales up to 54px.
-
-*Not yet confirmed with an actual rendered screenshot in this session* — see manual checklist below.
-
-## 8. Manual checklist (for you to run in a real browser — 5 minutes)
-
-- [ ] Open `index.html` directly (double-click) and confirm it renders with no missing assets.
-- [ ] Resize the window through ~375px, ~768px, and ~1200px+ and confirm the layout changes described in §7 actually happen visually (no overlap, no horizontal scrollbar).
-- [ ] Tab through the whole page from the top and confirm focus is always visible and follows a sane order (skip link → nav → hero CTAs → sections → form fields → footer links).
-- [ ] Submit the contact form empty → see 3 inline errors, no success message. Fill only an invalid email → see the email error. Fill everything validly → see the green success message and an empty, reset form.
-- [ ] Open DevTools console and confirm there are 0 errors/warnings on load or on interaction.
-- [ ] Click the Google Maps footer link and confirm it opens in a **new tab**.
-- [ ] Test in Chrome, Firefox, and Safari (or whichever engines you have available) — the CSS uses only widely-supported features (Grid, Flexbox, `clamp()`, CSS custom properties, `:focus-visible`), so no polyfills should be needed.
+- Equipment page images are placeholders: real photography needs to be supplied (see `specs/001-machinery-hof-website/spec.md` Clarifications).
+- `privacy.html` / `terms.html` are placeholders pending legal review.
