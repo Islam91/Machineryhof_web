@@ -149,18 +149,13 @@ summary:focus-visible {
   text-decoration: none;
 }
 
-.brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
+.brand-logo {
+  display: block;
+  height: 30px;
+  width: auto;
+  padding: 6px 8px;
   border-radius: var(--radius);
-  background: var(--gold-500);
-  color: var(--navy-900);
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 14px;
+  background: var(--white);
 }
 
 .brand-text {
