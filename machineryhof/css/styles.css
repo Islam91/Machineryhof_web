@@ -399,6 +399,14 @@ summary:focus-visible {
   background: linear-gradient(90deg, rgba(16, 42, 67, 0.96) 0%, rgba(16, 42, 67, 0.85) 40%, rgba(16, 42, 67, 0.48) 100%), url("../assets/parts_header.jpg") center 52% / cover;
 }
 
+.resources-page .page-hero {
+  background: linear-gradient(90deg, rgba(16, 42, 67, 0.96) 0%, rgba(16, 42, 67, 0.85) 40%, rgba(16, 42, 67, 0.48) 100%), url("../assets/catalog_header.jpg") center 52% / cover;
+}
+
+.solutions-page .page-hero {
+  background: linear-gradient(90deg, rgba(16, 42, 67, 0.96) 0%, rgba(16, 42, 67, 0.85) 40%, rgba(16, 42, 67, 0.48) 100%), url("../assets/solutions_page.jpg") center 52% / cover;
+}
+
 .page-hero::after {
   content: "MACHINERY HOF / TECHNICAL PARTS & ENGINEERING";
   position: absolute;
