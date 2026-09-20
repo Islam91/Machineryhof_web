@@ -1,6 +1,10 @@
 const REQUIRED_FIELDS = ["firstName", "lastName", "email", "company", "inquiryType", "message"];
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const SALES_EMAIL = "sales@machineryhof.com";
+const RECIPIENTS = [
+  { email: "baher@machineryhof.com", name: "Baher" },
+  { email: "islam@machinery-hof.com", name: "Islam" },
+  { email: "sales@machineryhof.com", name: "Sales" }
+];
 const FROM_EMAIL = "no-reply@machineryhofgmbh.com";
 
 function escapeHtml(value) {
@@ -94,7 +98,7 @@ export async function onRequestPost(context) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      personalizations: [{ to: [{ email: SALES_EMAIL, name: "Machinery Hof Sales" }] }],
+      personalizations: [{ to: RECIPIENTS }],
       from: { email: FROM_EMAIL, name: "machineryhofgmbh.com Contact Form" },
       reply_to: { email: payload.email, name: `${payload.firstName} ${payload.lastName}` },
       subject: `New ${payload.inquiryType} inquiry from ${payload.firstName} ${payload.lastName}`,
