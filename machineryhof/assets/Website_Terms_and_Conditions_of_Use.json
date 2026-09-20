@@ -1,0 +1,305 @@
+{
+  "document": {
+    "type": "Terms and Conditions - Website Use",
+    "company": "Machinery HOF GmbH",
+    "website": "machineryhofgmbh.com",
+    "location": "Bremen 28307, Germany",
+    "lastUpdated": "September 2026",
+    "version": "1.0",
+    "language": "en",
+    "contact": {
+      "phone": "+49 (0) 1520 2409390",
+      "email_primary": "islam@machinery-hof.com",
+      "email_secondary": "Imports.uea@gmail.com"
+    },
+    "sections": [
+      {
+        "id": 1,
+        "title": "ACCEPTANCE OF TERMS",
+        "subsections": [
+          {
+            "number": "1.1",
+            "content": "By accessing and using the website machineryhofgmbh.com (hereinafter referred to as \"Website\"), you agree to be bound by these Terms and Conditions of Use. If you do not agree to these terms, please do not use this Website."
+          },
+          {
+            "number": "1.2",
+            "content": "Machinery HOF GmbH (hereinafter referred to as \"Company\" or \"We\") reserves the right to modify these terms at any time. Changes shall become effective immediately upon posting to the Website. Your continued use of the Website following the posting of revised Terms and Conditions means that you accept and agree to the changes."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "USE LICENSE",
+        "subsections": [
+          {
+            "number": "2.1",
+            "content": "Permission is granted to temporarily download one copy of the materials (information and software) from the Website for personal, non-commercial use only. This is the grant of a license, not a transfer of title, and under this license you may not:",
+            "list": [
+              "Modify or copy the materials",
+              "Use the materials for any commercial purpose or for any public display (commercial or non-commercial)",
+              "Attempt to decompile or reverse engineer any software contained on the Website",
+              "Remove any copyright or other proprietary notations from the materials",
+              "Transfer the materials to another person or \"mirror\" the materials on any other server",
+              "Use automated tools, bots, or scrapers to collect data from the Website"
+            ]
+          },
+          {
+            "number": "2.2",
+            "content": "This license shall automatically terminate if you violate any of these restrictions and may be terminated by Machinery HOF GmbH at any time. Upon termination of your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "DISCLAIMER OF WARRANTIES",
+        "subsections": [
+          {
+            "number": "3.1",
+            "content": "The materials on the Website are provided on an 'as is' basis. Machinery HOF GmbH makes no warranties, expressed or implied, and hereby disclaims and negates any other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights."
+          },
+          {
+            "number": "3.2",
+            "content": "The Company does not represent or warrant that:",
+            "list": [
+              "The Website will be uninterrupted or error-free",
+              "Any defects or errors will be corrected",
+              "The Website or its servers are free of viruses or other harmful components",
+              "The information on the Website is accurate, complete, or reliable"
+            ]
+          },
+          {
+            "number": "3.3",
+            "content": "Technical specifications and product descriptions are provided for informational purposes only. While the Company strives for accuracy, the information may contain inadvertent errors. Customers are advised to independently verify all product specifications and technical data before making purchasing decisions."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "LIMITATION OF LIABILITY",
+        "subsections": [
+          {
+            "number": "4.1",
+            "content": "In no event shall Machinery HOF GmbH or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on the Website, even if the Company has been notified of the possibility of such damage."
+          },
+          {
+            "number": "4.2",
+            "content": "The liability limitation applies whether the alleged liability is based on contract, tort, negligence, strict liability, or any other basis, even if the Company has been advised of the possibility of such damage."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "ACCURACY OF MATERIALS",
+        "subsections": [
+          {
+            "number": "5.1",
+            "content": "The materials appearing on the Website could include technical, typographical, or photographic errors. Machinery HOF GmbH does not warrant that any of the materials on the Website are accurate, complete, or current."
+          },
+          {
+            "number": "5.2",
+            "content": "The Company may make changes to the materials contained on the Website at any time without notice. However, the Company does not commit to updating the materials."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "MATERIALS LICENSE AND INTELLECTUAL PROPERTY",
+        "subsections": [
+          {
+            "number": "6.1",
+            "content": "The materials on the Website, including all text, graphics, logos, images, and software (\"Materials\"), are the property of Machinery HOF GmbH or are used with permission. These Materials are protected by international copyright, trademark, and other intellectual property laws."
+          },
+          {
+            "number": "6.2",
+            "content": "You may not use, copy, reproduce, modify, transmit, or distribute any Materials without the prior written consent of Machinery HOF GmbH, except as expressly permitted by this license."
+          },
+          {
+            "number": "6.3",
+            "content": "Any unauthorized use of the Materials may violate copyright, trademark, and other laws. The Company will vigorously defend its intellectual property rights."
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "LIMITATIONS ON USE",
+        "subsections": [
+          {
+            "number": "7.1",
+            "content": "You agree not to access or use the Website for any purpose other than that for which the Company makes the Website available. The Website may not be used in connection with any commercial endeavor except those specifically endorsed or approved by the Company."
+          },
+          {
+            "number": "7.2",
+            "content": "Prohibited behavior includes:",
+            "list": [
+              "Harassing or causing distress or inconvenience to any person",
+              "Obscene or abusive speech or materials of a violent nature",
+              "Disrupting normal flow of dialogue within the Website",
+              "Attempting to gain unauthorized access to the Website's systems or data",
+              "Uploading or distributing viruses, malware, or any code of destructive nature",
+              "Engaging in any form of automated data collection or scraping without authorization"
+            ]
+          },
+          {
+            "number": "7.3",
+            "content": "The Company reserves the right to deny access to the Website to any person or entity violating these terms."
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "THIRD-PARTY LINKS",
+        "subsections": [
+          {
+            "number": "8.1",
+            "content": "The Website may contain links to other websites (\"External Links\"). The Company is not responsible for the content, accuracy, or practices of these external websites."
+          },
+          {
+            "number": "8.2",
+            "content": "Your use of External Links is at your own risk and subject to the terms and conditions of those websites. The Company assumes no responsibility for the availability or functionality of External Links."
+          },
+          {
+            "number": "8.3",
+            "content": "Inclusion of External Links does not constitute endorsement by Machinery HOF GmbH of the linked website, its contents, or operators."
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "USER CONTENT AND SUBMISSIONS",
+        "subsections": [
+          {
+            "number": "9.1",
+            "content": "If you submit any ideas, feedback, suggestions, or other content (\"User Content\") to the Website or Company, you grant Machinery HOF GmbH a worldwide, royalty-free, perpetual license to use, modify, and reproduce such User Content."
+          },
+          {
+            "number": "9.2",
+            "content": "By submitting User Content, you represent and warrant that such content does not infringe any third-party intellectual property rights or other legal rights."
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "COOKIES AND TRACKING",
+        "subsections": [
+          {
+            "number": "10.1",
+            "content": "The Website uses cookies and similar tracking technologies to enhance user experience and gather analytics data. By using the Website, you consent to the use of cookies in accordance with our Privacy Policy."
+          },
+          {
+            "number": "10.2",
+            "content": "You may disable cookies through your browser settings; however, this may limit the functionality of the Website."
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "title": "CONTACT FORMS AND INQUIRIES",
+        "subsections": [
+          {
+            "number": "11.1",
+            "content": "Information submitted through contact forms or inquiry pages will be used to respond to your inquiry or provide information about products and services. You may receive follow-up communications related to your inquiry."
+          },
+          {
+            "number": "11.2",
+            "content": "By submitting an inquiry, you consent to receive communications from Machinery HOF GmbH. You may unsubscribe from marketing communications at any time by contacting the Company."
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "title": "PRODUCT PRICING AND AVAILABILITY",
+        "subsections": [
+          {
+            "number": "12.1",
+            "content": "All prices displayed on the Website are subject to change without notice. Prices are valid only at the time of order confirmation and are subject to the Company's standard Terms and Conditions of Sale."
+          },
+          {
+            "number": "12.2",
+            "content": "Product availability information is updated regularly but may not always reflect current stock levels. The Company reserves the right to limit quantities and cancel orders."
+          },
+          {
+            "number": "12.3",
+            "content": "For accurate pricing and availability, please contact the Company directly."
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "REVISIONS AND CORRECTIONS",
+        "subsections": [
+          {
+            "number": "13.1",
+            "content": "The materials appearing on the Website could include technical, typographical, or photographic errors. Machinery HOF GmbH does not warrant that any of the materials on the Website are accurate, complete, or current."
+          },
+          {
+            "number": "13.2",
+            "content": "The Company may make changes to the materials contained on the Website at any time without notice."
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "TERMINATION OF ACCESS",
+        "subsections": [
+          {
+            "number": "14.1",
+            "content": "The Company may restrict, suspend, or terminate your access to the Website at any time for any reason, including but not limited to violation of these Terms and Conditions."
+          },
+          {
+            "number": "14.2",
+            "content": "Upon termination, your right to use the Website immediately ceases."
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "title": "INDEMNIFICATION",
+        "subsections": [
+          {
+            "number": "15.1",
+            "content": "You agree to indemnify and hold harmless Machinery HOF GmbH and its officers, directors, employees, agents, licensors, and suppliers from and against all losses, expenses, damages, and costs, including reasonable attorney's fees, resulting from:",
+            "list": [
+              "Any claim or demand made against the Company related to your use of the Website",
+              "Your violation of these Terms and Conditions",
+              "Your violation of any third-party rights"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "title": "APPLICABLE LAW AND JURISDICTION",
+        "subsections": [
+          {
+            "number": "16.1",
+            "content": "These Terms and Conditions are governed by and construed in accordance with the laws of the Federal Republic of Germany, without regard to its conflict of law provisions."
+          },
+          {
+            "number": "16.2",
+            "content": "Any legal action or proceeding arising under these Terms and Conditions will be brought exclusively in the courts located in Bremen, Germany, and you hereby consent to the personal jurisdiction and venue of such courts."
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "title": "SEVERABILITY",
+        "subsections": [
+          {
+            "number": "17.1",
+            "content": "If any provision of these Terms and Conditions is found to be invalid or unenforceable, that provision shall be modified to the minimum extent necessary to make it enforceable, or if not possible, severed, and the remaining provisions shall continue in full force and effect."
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "title": "ENTIRE AGREEMENT",
+        "subsections": [
+          {
+            "number": "18.1",
+            "content": "These Terms and Conditions, together with the Privacy Policy and any other policies referenced herein, constitute the entire agreement between you and Machinery HOF GmbH regarding your use of the Website and supersede all prior or contemporaneous communications and proposals, whether oral or written."
+          }
+        ]
+      }
+    ]
+  }
+}

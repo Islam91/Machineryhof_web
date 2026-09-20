@@ -105,7 +105,7 @@
       .catch(function () {
         setStatus(
           "error",
-          "We couldn't send your message right now. Please email sales@machineryhof.com or call +49 (0)152 0240 9390 instead."
+          "We couldn't send your message right now. Please email sales@machineryhof.com instead."
         );
       })
       .finally(function () {

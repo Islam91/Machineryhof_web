@@ -1,0 +1,203 @@
+{
+  "document": {
+    "type": "Terms and Conditions - Business",
+    "company": "Machinery HOF GmbH",
+    "location": "Bremen 28307, Germany",
+    "lastUpdated": "September 2026",
+    "version": "1.0",
+    "language": "en",
+    "contact": {
+      "phone": "+49 (0) 1520 2409390",
+      "email_primary": "islam@machinery-hof.com",
+      "email_secondary": "Imports.uea@gmail.com"
+    },
+    "sections": [
+      {
+        "id": 1,
+        "title": "SCOPE AND VALIDITY",
+        "subsections": [
+          {
+            "number": "1.1",
+            "content": "These Terms and Conditions apply to all business relationships between Machinery HOF GmbH (hereinafter referred to as \"Supplier\") and customers (hereinafter referred to as \"Buyer\"). These terms constitute the entire agreement between the parties."
+          },
+          {
+            "number": "1.2",
+            "content": "Any deviations from these Terms and Conditions require express written confirmation from the Supplier. General Terms and Conditions of the Buyer are explicitly rejected."
+          },
+          {
+            "number": "1.3",
+            "content": "These Terms and Conditions apply to all future business relationships with the Buyer without the need for renewed reference."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "OFFERS AND CONCLUSION OF CONTRACT",
+        "subsections": [
+          {
+            "number": "2.1",
+            "content": "All offers from the Supplier are non-binding and subject to confirmation. Prices stated are exclusive of value-added tax (VAT) where applicable."
+          },
+          {
+            "number": "2.2",
+            "content": "A contract is concluded only upon written confirmation of the order by the Supplier or upon commencement of performance (delivery of goods)."
+          },
+          {
+            "number": "2.3",
+            "content": "Order confirmations, quotations, and technical drawings remain the property of the Supplier and may not be made accessible to third parties without express permission."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "PRICES AND PAYMENT TERMS",
+        "subsections": [
+          {
+            "number": "3.1",
+            "content": "Prices quoted by the Supplier are ex works (EXW - Bremen, Germany) unless otherwise agreed in writing."
+          },
+          {
+            "number": "3.2",
+            "content": "All prices are subject to change if order fulfillment is delayed more than 30 days from quotation date. The Supplier shall notify the Buyer of any price changes."
+          },
+          {
+            "number": "3.3",
+            "content": "Payment is due net within 30 days of invoice date unless otherwise agreed. Invoice date is the date of shipment."
+          },
+          {
+            "number": "3.4",
+            "content": "If payment is not received by the due date, the Supplier reserves the right to charge interest at the statutory rate (9% per annum for commercial transactions as per German law) and to suspend further deliveries."
+          },
+          {
+            "number": "3.5",
+            "content": "The Buyer has no right of set-off or retention unless their counterclaim has been established by judgment or is undisputed."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "DELIVERY",
+        "subsections": [
+          {
+            "number": "4.1",
+            "content": "Delivery times stated are non-binding estimates only. The Supplier shall not be liable for delays caused by unforeseen circumstances, force majeure, strikes, lockouts, or other events beyond its reasonable control."
+          },
+          {
+            "number": "4.2",
+            "content": "Risk of loss and damage to goods passes to the Buyer upon handover to the freight forwarder or carrier, even if the Supplier covers shipping costs."
+          },
+          {
+            "number": "4.3",
+            "content": "The Supplier reserves the right to make partial deliveries and shipments. Partial deliveries do not constitute default."
+          },
+          {
+            "number": "4.4",
+            "content": "The Buyer must inspect deliveries immediately upon receipt and notify the Supplier of any defects within 5 working days. Failure to do so constitutes acceptance of the goods."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "WARRANTY AND LIABILITY",
+        "subsections": [
+          {
+            "number": "5.1",
+            "content": "The Supplier warrants that all delivered goods are free from defects in material and workmanship at the time of delivery. Warranty period is 12 months from delivery date for OEM parts, and 6 months for aftermarket parts."
+          },
+          {
+            "number": "5.2",
+            "content": "In the event of a defect, the Supplier's sole obligation is, at its discretion, to repair or replace the defective goods. Warranty claims do not entitle the Buyer to cancel the order or demand a refund."
+          },
+          {
+            "number": "5.3",
+            "content": "Warranty does not apply to:",
+            "list": [
+              "Damage resulting from improper handling, installation, or maintenance",
+              "Normal wear and tear",
+              "Modifications or repairs not performed by the Supplier",
+              "Aftermarket parts used beyond their intended lifespan"
+            ]
+          },
+          {
+            "number": "5.4",
+            "content": "The Supplier's liability is limited to the value of the defective goods. In no case shall the Supplier be liable for consequential damages, lost profits, business interruption, or indirect losses, even if advised of the possibility of such damages."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "INTELLECTUAL PROPERTY",
+        "subsections": [
+          {
+            "number": "6.1",
+            "content": "All drawings, technical documentation, samples, and other materials provided by the Supplier remain the property of the Supplier."
+          },
+          {
+            "number": "6.2",
+            "content": "The Buyer may not reproduce, copy, or disclose such materials to third parties without the Supplier's express written consent."
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "CONFIDENTIALITY",
+        "subsections": [
+          {
+            "number": "7.1",
+            "content": "Both parties agree to maintain the confidentiality of all non-public information exchanged during the business relationship."
+          },
+          {
+            "number": "7.2",
+            "content": "Confidentiality obligations shall survive termination of the business relationship."
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "RETENTION OF TITLE",
+        "subsections": [
+          {
+            "number": "8.1",
+            "content": "All goods supplied remain the property of the Supplier until full payment has been received. The Buyer shall not pledge or create liens on such goods."
+          },
+          {
+            "number": "8.2",
+            "content": "If the Buyer's financial situation deteriorates significantly or payment becomes uncertain, the Supplier may demand immediate return of the goods."
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "GENERAL PROVISIONS",
+        "subsections": [
+          {
+            "number": "9.1",
+            "content": "If any provision of these Terms and Conditions is found to be invalid or unenforceable, the remaining provisions shall continue in full force and effect."
+          },
+          {
+            "number": "9.2",
+            "content": "The Supplier is entitled to modify these Terms and Conditions. Modifications shall apply to future orders unless the Buyer objects in writing within 14 days."
+          },
+          {
+            "number": "9.3",
+            "content": "The failure of either party to enforce any provision shall not constitute a waiver of that provision."
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "APPLICABLE LAW AND DISPUTE RESOLUTION",
+        "subsections": [
+          {
+            "number": "10.1",
+            "content": "These Terms and Conditions and all business relationships shall be governed by the laws of the Federal Republic of Germany, excluding the United Nations Convention on Contracts for the International Sale of Goods (CISG)."
+          },
+          {
+            "number": "10.2",
+            "content": "The place of jurisdiction for all disputes arising from this business relationship shall be Bremen, Germany. However, the Supplier reserves the right to pursue claims in any court having jurisdiction where the Buyer is domiciled."
+          }
+        ]
+      }
+    ]
+  }
+}

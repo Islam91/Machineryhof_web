@@ -1,0 +1,285 @@
+{
+  "document": {
+    "type": "Privacy Policy",
+    "company": "Machinery HOF GmbH",
+    "website": "machineryhofgmbh.com",
+    "location": "Bremen 28307, Germany",
+    "lastUpdated": "September 2026",
+    "version": "1.0",
+    "language": "en",
+    "compliance": ["GDPR", "German Data Protection Law (BDSG)"],
+    "contact": {
+      "phone": "+49 (0) 1520 2409390",
+      "email": "islam@machinery-hof.com"
+    },
+    "sections": [
+      {
+        "id": 1,
+        "title": "INTRODUCTION",
+        "subsections": [
+          {
+            "number": "1.1",
+            "content": "Machinery HOF GmbH (\"Company,\" \"we,\" \"us,\" or \"our\") is committed to protecting your privacy and ensuring you have a positive experience on our website machineryhofgmbh.com (\"Website\"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our Website and use our services."
+          },
+          {
+            "number": "1.2",
+            "content": "This Privacy Policy complies with the General Data Protection Regulation (GDPR) and applies to all personal data processing activities conducted by Machinery HOF GmbH."
+          },
+          {
+            "number": "1.3",
+            "content": "Please read this Privacy Policy carefully. If you do not agree with our policies and practices, please do not use our Website."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "DATA CONTROLLER",
+        "subsections": [
+          {
+            "number": "2.1",
+            "content": "The data controller responsible for your personal data is:",
+            "details": {
+              "name": "Machinery HOF GmbH",
+              "location": "Bremen 28307, Germany",
+              "phone": "+49 (0) 1520 2409390",
+              "email": "islam@machinery-hof.com"
+            }
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "INFORMATION WE COLLECT",
+        "subsections": [
+          {
+            "number": "3.1",
+            "content": "We collect information in the following ways:",
+            "categories": [
+              {
+                "name": "Information You Provide Directly",
+                "items": [
+                  "Contact forms and inquiry submissions (name, email, phone, company, message)",
+                  "Quote requests and product inquiries",
+                  "Email communications with our sales team",
+                  "Order placement and payment information",
+                  "Feedback, reviews, and testimonials"
+                ]
+              },
+              {
+                "name": "Information Collected Automatically",
+                "items": [
+                  "Browser type and operating system",
+                  "IP address and location data",
+                  "Pages visited and time spent on the Website",
+                  "Referral source (how you found our Website)",
+                  "Device identifiers and cookie data"
+                ]
+              }
+            ]
+          },
+          {
+            "number": "3.2",
+            "content": "We do not intentionally collect personal data from children under 16 years of age. If we become aware that such data has been collected, we will delete it promptly."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "LEGAL BASIS FOR PROCESSING",
+        "subsections": [
+          {
+            "number": "4.1",
+            "content": "We process personal data on the following legal bases under GDPR:",
+            "list": [
+              "Consent: Processing where you have given explicit consent",
+              "Contract: Processing necessary to perform our contractual obligations",
+              "Legal Obligation: Processing required by applicable laws and regulations",
+              "Legitimate Interests: Processing necessary for our business purposes (customer service, marketing, fraud prevention)"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "HOW WE USE YOUR INFORMATION",
+        "subsections": [
+          {
+            "number": "5.1",
+            "content": "We use the information we collect for the following purposes:",
+            "list": [
+              "Processing and fulfilling your orders and inquiries",
+              "Providing customer support and technical assistance",
+              "Sending product updates, newsletters, and promotional materials (with your consent)",
+              "Improving our Website functionality and user experience",
+              "Analyzing website usage and user behavior through analytics",
+              "Detecting and preventing fraud or security breaches",
+              "Complying with legal obligations and industry regulations"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "DATA SHARING AND DISCLOSURE",
+        "subsections": [
+          {
+            "number": "6.1",
+            "content": "We do not sell, trade, or rent your personal data to third parties. We may share your information only in the following circumstances:",
+            "list": [
+              "Service Providers: Trusted third parties who assist us in operating our Website and providing services",
+              "Legal Requirements: When required by law or in response to legal process",
+              "Business Transfers: In the event of merger, acquisition, or sale of assets",
+              "Your Consent: When you explicitly authorize us to share your data"
+            ]
+          },
+          {
+            "number": "6.2",
+            "content": "All service providers are bound by data processing agreements and are required to maintain the confidentiality and security of your personal data."
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "DATA RETENTION",
+        "subsections": [
+          {
+            "number": "7.1",
+            "content": "We retain personal data for as long as necessary to fulfill the purposes for which it was collected, or as required by law:",
+            "retention": [
+              {
+                "type": "Contact information",
+                "duration": "Up to 3 years after last contact unless ongoing relationship exists"
+              },
+              {
+                "type": "Order and transaction data",
+                "duration": "7 years (German tax law requirements)"
+              },
+              {
+                "type": "Website analytics data",
+                "duration": "Up to 26 months"
+              },
+              {
+                "type": "Newsletter subscribers",
+                "duration": "Until unsubscription request"
+              }
+            ]
+          },
+          {
+            "number": "7.2",
+            "content": "When data is no longer needed, we securely delete or anonymize it."
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "DATA SECURITY",
+        "subsections": [
+          {
+            "number": "8.1",
+            "content": "We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction, including:",
+            "list": [
+              "SSL encryption for data transmission (HTTPS)",
+              "Secure firewalls and intrusion detection systems",
+              "Regular security audits and vulnerability assessments",
+              "Access controls and employee confidentiality agreements"
+            ]
+          },
+          {
+            "number": "8.2",
+            "content": "While we strive to protect your personal data, no method of transmission over the internet is completely secure. We cannot guarantee absolute security."
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "YOUR RIGHTS UNDER GDPR",
+        "subsections": [
+          {
+            "number": "9.1",
+            "content": "You have the following rights regarding your personal data:",
+            "rights": [
+              {
+                "name": "Right of Access",
+                "description": "You may request a copy of your personal data we hold"
+              },
+              {
+                "name": "Right to Rectification",
+                "description": "You may request corrections to inaccurate data"
+              },
+              {
+                "name": "Right to Erasure",
+                "description": "You may request deletion of your personal data (\"right to be forgotten\")"
+              },
+              {
+                "name": "Right to Restrict Processing",
+                "description": "You may request limitation of data processing"
+              },
+              {
+                "name": "Right to Data Portability",
+                "description": "You may request your data in a structured, commonly used format"
+              },
+              {
+                "name": "Right to Object",
+                "description": "You may object to processing for marketing purposes"
+              },
+              {
+                "name": "Right to Withdraw Consent",
+                "description": "You may withdraw consent at any time"
+              }
+            ]
+          },
+          {
+            "number": "9.2",
+            "content": "To exercise any of these rights, please contact us at islam@machinery-hof.com with your request. We will respond within 30 days."
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "COOKIES AND TRACKING TECHNOLOGIES",
+        "subsections": [
+          {
+            "number": "10.1",
+            "content": "We use cookies and similar technologies to enhance your experience. Please refer to our Cookie Policy for detailed information about which cookies we use and how you can manage them."
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "title": "EXTERNAL LINKS",
+        "subsections": [
+          {
+            "number": "11.1",
+            "content": "Our Website may contain links to external websites. We are not responsible for the privacy practices of these third-party sites. We recommend reviewing their privacy policies before providing personal data."
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "title": "INTERNATIONAL DATA TRANSFERS",
+        "subsections": [
+          {
+            "number": "12.1",
+            "content": "Your personal data is primarily processed and stored in the European Union. If data is transferred outside the EU/EEA, we ensure appropriate safeguards are in place, such as Standard Contractual Clauses (SCCs) or Binding Corporate Rules (BCRs)."
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "CONTACT US",
+        "subsections": [
+          {
+            "number": "13.1",
+            "content": "If you have questions about this Privacy Policy or wish to exercise your data rights, please contact us:",
+            "contact": {
+              "name": "Machinery HOF GmbH",
+              "location": "Bremen 28307, Germany",
+              "phone": "+49 (0) 1520 2409390",
+              "email": "islam@machinery-hof.com"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

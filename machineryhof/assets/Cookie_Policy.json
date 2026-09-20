@@ -1,0 +1,274 @@
+{
+  "document": {
+    "type": "Cookie Policy",
+    "company": "Machinery HOF GmbH",
+    "website": "machineryhofgmbh.com",
+    "location": "Bremen 28307, Germany",
+    "lastUpdated": "September 2026",
+    "version": "1.0",
+    "language": "en",
+    "compliance": ["GDPR", "ePrivacy Directive"],
+    "contact": {
+      "phone": "+49 (0) 1520 2409390",
+      "email": "islam@machinery-hof.com"
+    },
+    "sections": [
+      {
+        "id": 1,
+        "title": "INTRODUCTION",
+        "subsections": [
+          {
+            "number": "1.1",
+            "content": "Machinery HOF GmbH (\"Company,\" \"we,\" or \"us\") uses cookies and similar tracking technologies on our website machineryhofgmbh.com (\"Website\") to enhance user experience, analyze website performance, and support marketing efforts."
+          },
+          {
+            "number": "1.2",
+            "content": "This Cookie Policy explains what cookies are, which cookies we use, and how you can control them."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "WHAT ARE COOKIES?",
+        "subsections": [
+          {
+            "number": "2.1",
+            "content": "Cookies are small text files that are stored on your device (computer, tablet, or mobile phone) when you visit our Website. They serve to remember information about your visit and preferences."
+          },
+          {
+            "number": "2.2",
+            "content": "Similar technologies include:",
+            "list": [
+              "Web beacons (pixel tags)",
+              "Local storage (localStorage and sessionStorage)",
+              "Analytics tags and tracking scripts"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "TYPES OF COOKIES",
+        "subsections": [
+          {
+            "number": "3.1",
+            "content": "Strictly Necessary Cookies",
+            "details": {
+              "description": "These cookies are essential for the Website to function properly. They enable core functionality such as security, network management, and compliance with legal requirements. These cookies cannot be disabled.",
+              "examples": "Session cookies, security tokens, CSRF protection"
+            }
+          },
+          {
+            "number": "3.2",
+            "content": "Performance Cookies",
+            "details": {
+              "description": "These cookies help us understand how users interact with our Website by collecting anonymous information about page visits, user behavior, and device information.",
+              "examples": "Google Analytics cookies"
+            }
+          },
+          {
+            "number": "3.3",
+            "content": "Preference Cookies",
+            "details": {
+              "description": "These cookies remember your preferences and settings to provide a more personalized experience on future visits.",
+              "examples": "Language preference, website theme, display preferences"
+            }
+          },
+          {
+            "number": "3.4",
+            "content": "Marketing Cookies",
+            "details": {
+              "description": "These cookies are used to track visitors across websites to display targeted advertising and marketing content. They may be set by third-party advertising partners.",
+              "examples": "Retargeting pixels, conversion tracking, audience identification"
+            }
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "COOKIES WE USE",
+        "subsections": [
+          {
+            "number": "4.1",
+            "content": "The following table lists the main cookies used on our Website:",
+            "cookies": [
+              {
+                "name": "_ga, _gid, _gat",
+                "type": "Performance",
+                "purpose": "Google Analytics - tracks user behavior and website performance",
+                "duration": "2 years"
+              },
+              {
+                "name": "sessionid",
+                "type": "Strictly Necessary",
+                "purpose": "Maintains user session and security",
+                "duration": "Session"
+              },
+              {
+                "name": "CSRF token",
+                "type": "Strictly Necessary",
+                "purpose": "Protects against cross-site request forgery attacks",
+                "duration": "Session"
+              },
+              {
+                "name": "language_preference",
+                "type": "Preference",
+                "purpose": "Remembers user's language selection",
+                "duration": "1 year"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "THIRD-PARTY COOKIES",
+        "subsections": [
+          {
+            "number": "5.1",
+            "content": "We use third-party services that may set their own cookies on your device:",
+            "thirdParties": [
+              {
+                "name": "Google Analytics",
+                "purpose": "Website analytics and performance tracking",
+                "link": "https://www.google.com/policies/privacy/"
+              },
+              {
+                "name": "Payment Processors",
+                "purpose": "Secure online transactions",
+                "link": "Varies by provider"
+              },
+              {
+                "name": "Email Service Providers",
+                "purpose": "Newsletter management and communication",
+                "link": "Varies by provider"
+              }
+            ]
+          },
+          {
+            "number": "5.2",
+            "content": "These third parties have their own privacy policies governing their cookie use. We recommend reviewing their policies at their respective websites."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "HOW WE USE COOKIES",
+        "subsections": [
+          {
+            "number": "6.1",
+            "content": "We use cookies for the following purposes:",
+            "list": [
+              "Enabling core website functionality and security",
+              "Remembering your preferences and settings",
+              "Analyzing website traffic and user behavior",
+              "Measuring the effectiveness of marketing campaigns",
+              "Delivering personalized content and advertisements",
+              "Preventing fraud and improving security"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "CONSENT AND COOKIE CONTROL",
+        "subsections": [
+          {
+            "number": "7.1",
+            "content": "We obtain your consent for non-essential cookies through a cookie banner displayed when you first visit our Website. You can:",
+            "options": [
+              "Accept all cookies",
+              "Accept only essential cookies",
+              "Customize your cookie preferences"
+            ]
+          },
+          {
+            "number": "7.2",
+            "content": "You can manage cookies through your browser settings:",
+            "browserOptions": [
+              "Most browsers allow you to refuse cookies or alert you when a cookie is being sent",
+              "You can delete existing cookies from your browser",
+              "You can set your browser to block third-party cookies"
+            ]
+          },
+          {
+            "number": "7.3",
+            "content": "Please note that disabling cookies may affect Website functionality and user experience."
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "OPT-OUT OPTIONS",
+        "subsections": [
+          {
+            "number": "8.1",
+            "content": "You can opt out of specific cookie types:",
+            "optOutOptions": [
+              {
+                "type": "Google Analytics",
+                "link": "https://tools.google.com/dlpage/gaoptout/",
+                "description": "Opt out of Google Analytics tracking"
+              },
+              {
+                "type": "Marketing Cookies",
+                "link": "https://www.networkadvertising.org/",
+                "description": "Opt out of interest-based advertising via NAI Opt-Out"
+              }
+            ]
+          },
+          {
+            "number": "8.2",
+            "content": "You can also use the Cookie Preference Center on our Website to adjust your settings at any time."
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "PRIVACY RIGHTS",
+        "subsections": [
+          {
+            "number": "9.1",
+            "content": "Cookies may contain or result in the processing of personal data. Please refer to our Privacy Policy for information about how we collect, use, and protect your personal data."
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "DO NOT TRACK",
+        "subsections": [
+          {
+            "number": "10.1",
+            "content": "Some browsers include a \"Do Not Track\" feature. Our Website does not currently respond to Do Not Track signals, as there is no industry standard for recognizing such signals."
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "title": "UPDATES TO THIS POLICY",
+        "subsections": [
+          {
+            "number": "11.1",
+            "content": "We may update this Cookie Policy from time to time to reflect changes in our cookie practices or legal requirements. We will notify you of any material changes by posting the updated policy on our Website with an updated \"Last Updated\" date."
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "title": "CONTACT US",
+        "subsections": [
+          {
+            "number": "12.1",
+            "content": "If you have questions about this Cookie Policy, please contact us:",
+            "contact": {
+              "name": "Machinery HOF GmbH",
+              "location": "Bremen 28307, Germany",
+              "phone": "+49 (0) 1520 2409390",
+              "email": "islam@machinery-hof.com"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
