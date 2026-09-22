@@ -7,6 +7,10 @@ const RECIPIENTS = [
 ];
 const FROM_EMAIL = "no-reply@machineryhofgmbh.com";
 
+function getDb(context) {
+  return context.env?.DB;
+}
+
 function escapeHtml(value) {
   return String(value)
     .replace(/&/g, "&amp;")
@@ -93,6 +97,37 @@ export async function onRequestPost(context) {
   }
 
   const { text, html } = buildEmailBody(payload);
+  const db = getDb(context);
+
+  if (db) {
+    try {
+      await db.prepare(`
+        INSERT INTO contact_inquiries (
+          first_name,
+          last_name,
+          email,
+          phone,
+          company,
+          inquiry_type,
+          product_interest,
+          message,
+          created_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+      `).bind(
+        payload.firstName,
+        payload.lastName,
+        payload.email,
+        payload.phone || "",
+        payload.company,
+        payload.inquiryType,
+        payload.productInterest || "",
+        payload.message,
+        new Date().toISOString()
+      ).run();
+    } catch (error) {
+      console.error("D1 insert failed", error);
+    }
+  }
 
   const mailResponse = await fetch("https://api.mailchannels.net/tx/v1/send", {
     method: "POST",

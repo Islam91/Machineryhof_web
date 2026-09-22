@@ -1,0 +1,8 @@
+name = "machineryhof-web"
+compatibility_date = "2026-09-22"
+pages_build_output_dir = "machineryhof"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "machineryhof-contact"
+database_id = "efff5484-a768-4c8b-9a27-a3d358bd6891"
