@@ -105,7 +105,7 @@
       .catch(function () {
         setStatus(
           "error",
-          "We couldn't send your message right now. Please email sales@machineryhof.com instead."
+          "We couldn't send your message right now. Please try again in a moment or contact us directly by email."
         );
       })
       .finally(function () {

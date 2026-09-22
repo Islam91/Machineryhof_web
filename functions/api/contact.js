@@ -30,29 +30,6 @@ function validate(payload) {
   return null;
 }
 
-function buildEmailBody(payload) {
-  const rows = [
-    ["Name", `${payload.firstName} ${payload.lastName}`],
-    ["Email", payload.email],
-    ["Phone", payload.phone || "N/A"],
-    ["Company", payload.company],
-    ["Inquiry Type", payload.inquiryType],
-    ["Product Interest", payload.productInterest || "N/A"]
-  ];
-
-  const textLines = rows.map(([label, value]) => `${label}: ${value}`);
-  textLines.push("", "Message:", payload.message);
-
-  const htmlRows = rows
-    .map(([label, value]) => `<tr><td><strong>${escapeHtml(label)}</strong></td><td>${escapeHtml(value)}</td></tr>`)
-    .join("");
-
-  return {
-    text: textLines.join("\n"),
-    html: `<table>${htmlRows}</table><p><strong>Message:</strong></p><p>${escapeHtml(payload.message).replace(/\n/g, "<br>")}</p>`
-  };
-}
-
 async function rateLimit(context) {
   const ip = context.request.headers.get("cf-connecting-ip") || "unknown";
   const cache = caches.default;
@@ -96,57 +73,43 @@ export async function onRequestPost(context) {
     });
   }
 
-  const { text, html } = buildEmailBody(payload);
   const db = getDb(context);
 
-  if (db) {
-    try {
-      await db.prepare(`
-        INSERT INTO contact_inquiries (
-          first_name,
-          last_name,
-          email,
-          phone,
-          company,
-          inquiry_type,
-          product_interest,
-          message,
-          created_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-      `).bind(
-        payload.firstName,
-        payload.lastName,
-        payload.email,
-        payload.phone || "",
-        payload.company,
-        payload.inquiryType,
-        payload.productInterest || "",
-        payload.message,
-        new Date().toISOString()
-      ).run();
-    } catch (error) {
-      console.error("D1 insert failed", error);
-    }
+  if (!db) {
+    return new Response(JSON.stringify({ error: "Database not configured" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" }
+    });
   }
 
-  const mailResponse = await fetch("https://api.mailchannels.net/tx/v1/send", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      personalizations: [{ to: RECIPIENTS }],
-      from: { email: FROM_EMAIL, name: "machineryhofgmbh.com Contact Form" },
-      reply_to: { email: payload.email, name: `${payload.firstName} ${payload.lastName}` },
-      subject: `New ${payload.inquiryType} inquiry from ${payload.firstName} ${payload.lastName}`,
-      content: [
-        { type: "text/plain", value: text },
-        { type: "text/html", value: html }
-      ]
-    })
-  });
-
-  if (!mailResponse.ok) {
-    return new Response(JSON.stringify({ error: "Email delivery failed" }), {
-      status: 502,
+  try {
+    await db.prepare(`
+      INSERT INTO contact_inquiries (
+        first_name,
+        last_name,
+        email,
+        phone,
+        company,
+        inquiry_type,
+        product_interest,
+        message,
+        created_at
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `).bind(
+      payload.firstName,
+      payload.lastName,
+      payload.email,
+      payload.phone || "",
+      payload.company,
+      payload.inquiryType,
+      payload.productInterest || "",
+      payload.message,
+      new Date().toISOString()
+    ).run();
+  } catch (error) {
+    console.error("D1 insert failed", error);
+    return new Response(JSON.stringify({ error: "Submission could not be saved" }), {
+      status: 500,
       headers: { "Content-Type": "application/json" }
     });
   }
