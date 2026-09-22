@@ -1,8 +1,21 @@
 const REQUIRED_FIELDS = ["firstName", "lastName", "email", "company", "inquiryType", "message"];
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const RECIPIENTS = [
+  { email: "baher@machineryhof.com", name: "Baher" },
+  { email: "islam@machinery-hof.com", name: "Islam" },
+  { email: "sales@machineryhof.com", name: "Sales" }
+];
+const FROM_EMAIL = "no-reply@machineryhofgmbh.com";
 
 function getDb(context) {
   return context.env?.DB;
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
 }
 
 function validate(payload) {
